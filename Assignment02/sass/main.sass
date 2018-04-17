@@ -1,0 +1,122 @@
+@import '_colors.scss'
+@import '_mediaqueries.scss'
+@import '_typography.scss'
+@import '_grid.scss'
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+body
+    width: 100%
+    margin: 20px auto
+    header
+        margin-bottom: 2em
+        height: 200px
+        nav
+            text-align: center
+            width: 100%
+            float: right
+            margin: 2em
+            background-color: $darkRed
+            color: $white
+            overflow: hidden
+            @include breakpoint(mobile)
+                margin: 0
+            ul
+                width: 100%
+                text-align: center
+                
+                @include breakpoint(mobile)
+                    text-align: center
+                li
+                    float: left
+                    list-style-type: none
+                    width: 20%
+                    height: 40px
+                    line-height: 40px
+                    position: relative
+                    text-align: center
+                    font-weight: bold
+                    @include breakpoint(mobile)
+                        float: none
+                        width: auto
+                        margin: 0
+                        
+                    a
+                        text-decoration: none
+                        float: left
+                        text-align: center
+                        padding: 14px 16px
+                        font-size: 17px
+                    .dropdown
+                        display: none
+                        @include breakpoint(mobile)
+                            display: inline
+                    &:hover 
+                        .dropdown
+                            display: block
+                            background: rgba(gray, 0.9)
+                            width: 100%
+                            position: absolute
+                            top: 40px
+                            left: 10px
+                            text-align: center
+                            li
+                                float: none
+                                width: auto
+                                text-align: left
+                                a
+                                    padding-left: 3%
+    main
+        max-width: 1100px
+        width: 100%
+        margin: 20px  auto
+        @include breakpoint(mobile)
+            padding: 10px
+        #header
+            width: 100%
+            padding: 20px
+            @include breakpoint(mobile)
+                width: 50%
+                padding: 0
+            img
+                width: 50%
+                margin: 0 auto
+            h6
+                color: $darkBlue
+            
+            
+        section
+            padding: 1em
+            float: left
+            width: 65%
+            margin-right: 2em
+            @include breakpoint(tablet)
+                float: none
+                display: block
+                width: 100%
+            @include breakpoint(mobile)
+                float: none
+                display: block
+                width: 100%
+            #col
+                column-count: 3
+                @include breakpoint(tablet)
+                    column-count: 2
+                @include breakpoint(mobile)
+                    column-count: 1
+
+        aside
+            padding: 1em
+            float: right
+            width: 28%
+            @include breakpoint(tablet)
+                float: none 
+                display: block
+                width: 100%
+                margin: 10px auto
+            @include breakpoint(mobile)
+                float: none 
+                display: block
+                width: 100%
+                margin: 10px auto
