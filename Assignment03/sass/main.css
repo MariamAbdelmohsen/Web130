@@ -430,6 +430,7 @@ nav ul.closed li {
   nav ul.closed li {
     display: block;
     background-image: none;
+    border-right: 1px solid #fff;
   }
 }
 
@@ -439,6 +440,7 @@ nav ul.closed li {
     background-image: none;
     float: left;
     width: 20%;
+    border-right: 1px solid #fff;
   }
 }
 
@@ -482,6 +484,7 @@ nav ul li {
   font-weight: bold;
   text-align: center;
   background-color: #2DA9FF;
+  border-top: 1px solid #fff;
 }
 
 @media screen and (min-width: 40em) and (max-width: 59.99em) {
@@ -498,6 +501,10 @@ nav ul li a {
   color: #fff;
 }
 
+nav ul li a:nth-child(n+2) {
+  display: none;
+}
+
 @media screen and (min-width: 40em) and (max-width: 59.99em) {
   nav ul li .dropdown {
     display: none;
@@ -510,40 +517,45 @@ nav ul li a {
   }
 }
 
-nav ul li:hover {
-  background-color: #0A75BE;
-  border: 2px solid #fff;
+nav ul li .dropdown li {
+  border: 0;
 }
 
-nav ul li:hover .dropdown {
-  display: none;
-  display: flex;
-  border-top: 2px solid;
+nav ul li:hover {
+  background-color: #0A75BE;
+}
+
+nav ul li:hover ul.dropdown {
+  display: block;
+}
+
+@media screen and (min-width: 40em) and (max-width: 59.99em) {
+  nav ul li:hover ul.dropdown {
+    display: flex;
+    border-top: 1px solid;
+  }
 }
 
 @media screen and (min-width: 60em) {
-  nav ul li:hover .dropdown {
+  nav ul li:hover ul.dropdown {
     display: block;
     float: left;
   }
 }
 
-nav ul li:hover li {
+nav ul li:hover ul.dropdown li {
   float: none;
   width: auto;
-  text-align: left;
   padding: 0 20px;
   background-color: #2DA9FF;
-  border: 0;
 }
 
 @media screen and (min-width: 60em) {
-  nav ul li:hover li {
+  nav ul li:hover ul.dropdown li {
     display: block;
   }
-  nav ul li:hover li:hover {
+  nav ul li:hover ul.dropdown li:hover {
     background-color: #0A75BE;
-    border: 2px solid #fff;
   }
 }
 

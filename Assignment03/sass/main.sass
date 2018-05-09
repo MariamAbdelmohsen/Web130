@@ -29,11 +29,14 @@ nav
             @include breakpoint (tablet)
                 display: block
                 background-image: none
+                border-right: 1px solid $white
+
             @include breakpoint (desktop)
                 display: block
                 background-image: none
                 float: left
                 width: 20%
+                border-right: 1px solid $white
             &#mobile-menu
                 display: block
                 @include breakpoint (tablet)
@@ -54,6 +57,7 @@ nav
             font-weight: bold
             text-align: center
             background-color: $lightBlue
+            border-top: 1px solid $white
             @include breakpoint (tablet)
                 float: left
                 width: 20%
@@ -62,34 +66,36 @@ nav
                 text-align: center
                 font-size: 17px
                 color: $white
+                &:nth-child(n+2) 
+                    display: none
             .dropdown
                 @include breakpoint (tablet)
                     display: none  
                 @include breakpoint (desktop)
                     display: none  
+                li
+                    border: 0
             &:hover 
                 background-color: $darkBlue
-                border: 2px solid $white
-                .dropdown
-                    display: none
+                ul.dropdown
+                    display: block
                     @include breakpoint (tablet)
-                    display: flex
-                    border-top: 2px solid
+                        display: flex
+                        border-top: 1px solid
+                        
                     @include breakpoint (desktop)
                         display: block
                         float: left
-                li
-                    float: none
-                    width: auto
-                    text-align: left
-                    padding: 0 20px
-                    background-color: $lightBlue
-                    border: 0
-                    @include breakpoint (desktop)
-                        display: block
-                        &:hover 
-                            background-color: $darkBlue
-                            border: 2px solid $white
+                    li
+                        float: none
+                        width: auto
+                        padding: 0 20px
+                        background-color: $lightBlue
+                        @include breakpoint (desktop)
+                            display: block
+                            &:hover 
+                                background-color: $darkBlue
+                                // border: 2px solid $white
              
     main
         max-width: 1100px
