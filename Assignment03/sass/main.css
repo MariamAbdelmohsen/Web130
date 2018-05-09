@@ -405,6 +405,7 @@ body {
 
 body header {
   margin-bottom: 2em;
+  height: 150px;
 }
 
 nav {
@@ -511,11 +512,11 @@ nav ul li a {
 
 nav ul li:hover {
   background-color: #0A75BE;
-  border-left: 2px solid #fff;
-  border-right: 2px solid #fff;
+  border: 2px solid #fff;
 }
 
 nav ul li:hover .dropdown {
+  display: none;
   display: flex;
   border-top: 2px solid;
 }
