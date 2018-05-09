@@ -1,0 +1,151 @@
+/*********************
+Typography
+*********************/
+
+@import '_colors.scss';
+@import '_mediaqueries.scss';
+// a {
+//     outline: none !important;
+//     font-weight: bold;
+//     text-decoration: none;
+//     &:link {
+//         color: $darkRed
+//     }
+//     &:visited,
+//     &:hover {
+//         color: $darkBlue;
+//     }
+//     &:active {
+//         color: $darkRed;
+//         outline: none;
+//     }
+// }
+h1 {
+    font-size: 2em;
+    line-height: 1.35;
+    font-style: normal;
+    margin: 1.5em 0 0.8em;
+    @include breakpoint(mobile) {
+        font-size: 1.5em;
+        line-height: 1.1;
+    }
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 200%;
+    margin: 1em 0 0.8em;
+}
+
+h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 150%;
+    letter-spacing: 0.15em;
+    margin: 1.75em 0 0.8em;
+}
+
+h4 {
+    font-weight: normal;
+    font-size: 150%;
+    letter-spacing: 0.1em;
+    margin: 1.5em 0 0.8em;
+}
+
+h5 {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 150%;
+    margin: 1.5em 0 0.8em;
+}
+
+h6 {
+    font-weight: bold;
+    font-size: 100%;
+    letter-spacing: 0.1em;
+    margin: 1.5em 0 0.8em;
+    color: gray;
+}
+
+p {
+    text-align: left;
+    font-size: 100%;
+    margin: 1em 0 0;
+    &.lead {
+        font-size: 150%;
+        margin: 1em 0;
+        p {
+            text-indent: 0;
+        }
+    }
+}
+
+blockquote {
+    border-left: 5px solid $gray;
+    padding-left: 1.5em;
+    margin: 1em 0;
+    small {
+        display: block;
+        line-height: 1.7em;
+    }
+}
+
+ul,
+ol,
+dl {
+    text-align: left;
+}
+
+dt {
+    font-weight: bold;
+}
+
+code {
+    font-family: courier, monospace;
+}
+
+p>code {
+    padding: 0.25em;
+    background: $gray;
+}
+
+pre {
+    text-align: left;
+    font-size: 100%;
+}
+
+hr {
+    height: 0;
+    color: $gray;
+    border: 1px solid $gray;
+    margin: 2em 0 1em;
+}
+
+.normal {
+    font-weight: normal;
+}
+
+.quiet {
+    color: $gray;
+}
+
+.pull-left {
+    float: left;
+    margin: 0.5em 2em 1em 0;
+}
+
+.pull-right {
+    float: right;
+    margin: 0.5em 0 1em 2em;
+}
+
+@media (max-width: 500px) {
+    body {
+        font-size: 80%;
+    }
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        float: none !important;
+    }
+}

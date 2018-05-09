@@ -1,0 +1,163 @@
+@import '_colors.scss'
+@import '_mediaqueries.scss'
+@import '_typography.scss'
+@import '_grid.scss'
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+body
+    width: 100%
+    margin: 20px auto
+    max-width: 1100px
+    header
+        margin-bottom: 2em
+        
+    
+nav
+    text-align: center
+    font-family: 'Inconsolata', monospace
+    ul
+        text-align: left
+        float: left
+        width: 100%
+        // @include breakpoint (tablet)
+        //     background-color: $lightBlue
+        &.closed li
+            background-image: url("../images/Hamburger.png")
+            background-repeat: no-repeat
+            display: none
+            background-color: $lightBlue
+            @include breakpoint (tablet)
+                display: block
+                background-image: none
+            @include breakpoint (desktop)
+                display: block
+                background-image: none
+                float: left
+                width: 20%
+            &#mobile-menu
+                display: block
+                @include breakpoint (tablet)
+                    display: none 
+                @include breakpoint (desktop) 
+                    display: none 
+        &.open li.mobile-only
+            background-image: url("../images/X-Icon.png")
+            background-repeat: no-repeat
+            @include breakpoint (tablet)
+                display: none
+            @include breakpoint (desktop) 
+                display: none 
+        li
+            list-style-type: none
+            width: auto
+            line-height: 40px
+            font-weight: bold
+            text-align: center
+            background-color: $lightBlue
+
+            @include breakpoint (tablet)
+                float: left
+                width: 20%
+            a
+                text-decoration: none
+                text-align: center
+                font-size: 17px
+                color: $white
+            .dropdown
+                @include breakpoint (tablet)
+                    display: none  
+                @include breakpoint (desktop)
+                    display: none  
+            &:hover 
+                background-color: $darkBlue
+                border-left: 2px solid $white
+                border-right: 2px solid $white
+                .dropdown
+                    display: flex
+                    border-top: 2px solid
+                    @include breakpoint (desktop)
+                        display: block
+                        float: left
+                li
+                    float: none
+                    width: auto
+                    text-align: left
+                    padding: 0 20px
+                    background-color: $lightBlue
+                    border: 0
+                    @include breakpoint (desktop)
+                        display: block
+                        &:hover 
+                            background-color: $darkBlue
+                            // border-left: 2px solid $white
+                            border: 2px solid $white
+        //                     
+        //                     li
+        //                         float: none
+        //                         width: auto
+        //                         text-align: left
+        //                         padding: 0 20px
+        //                         background-color: $lightBlue
+        //                         border: 0
+        //                         &:hover
+        //                             background-color: $darkBlue
+        //                             color: $white
+    
+        //                         a
+        //                             padding-left: 3%
+            
+    main
+        max-width: 1100px
+        width: 100%
+        margin: 20px  auto
+        @include breakpoint(mobile)
+            padding: 10px
+        #header
+            width: 100%
+            padding: 20px
+            @include breakpoint(mobile)
+                width: 50%
+                padding: 0
+            img
+                width: 50%
+                margin: 0 auto
+            h6
+                color: $darkBlue
+            
+            
+        section
+            padding: 1em
+            float: left
+            width: 65%
+            margin-right: 2em
+            @include breakpoint(tablet)
+                float: none
+                display: block
+                width: 100%
+            @include breakpoint(mobile)
+                float: none
+                display: block
+                width: 100%
+            #col
+                column-count: 3
+                @include breakpoint(tablet)
+                    column-count: 2
+                @include breakpoint(mobile)
+                    column-count: 1
+
+        aside
+            padding: 1em
+            float: right
+            width: 28%
+            @include breakpoint(tablet)
+                float: none 
+                display: block
+                width: 100%
+                margin: 10px auto
+            @include breakpoint(mobile)
+                float: none 
+                display: block
+                width: 100%
+                margin: 10px auto
