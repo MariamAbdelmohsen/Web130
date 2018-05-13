@@ -21,6 +21,8 @@ nav
         text-align: left
         float: left
         width: 100%
+        background-color: $lightBlue
+        
         &.closed li
             background-image: url("../images/Hamburger.png")
             background-repeat: no-repeat
@@ -30,6 +32,7 @@ nav
                 display: block
                 background-image: none
                 border-right: 1px solid $white
+                height: 40px
 
             @include breakpoint (desktop)
                 display: block
@@ -37,6 +40,7 @@ nav
                 float: left
                 width: 20%
                 border-right: 1px solid $white
+                height: 40px
             &#mobile-menu
                 display: block
                 @include breakpoint (tablet)
@@ -78,7 +82,7 @@ nav
             &:hover 
                 background-color: $darkBlue
                 ul.dropdown
-                    display: block
+                    display: block                     
                     @include breakpoint (tablet)
                         display: flex
                         border-top: 1px solid
@@ -86,6 +90,7 @@ nav
                     @include breakpoint (desktop)
                         display: block
                         float: left
+
                     li
                         float: none
                         width: auto

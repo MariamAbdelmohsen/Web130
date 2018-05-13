@@ -417,6 +417,7 @@ nav ul {
   text-align: left;
   float: left;
   width: 100%;
+  background-color: #2DA9FF;
 }
 
 nav ul.closed li {
@@ -431,6 +432,7 @@ nav ul.closed li {
     display: block;
     background-image: none;
     border-right: 1px solid #fff;
+    height: 40px;
   }
 }
 
@@ -441,6 +443,7 @@ nav ul.closed li {
     float: left;
     width: 20%;
     border-right: 1px solid #fff;
+    height: 40px;
   }
 }
 
