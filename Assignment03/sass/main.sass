@@ -21,9 +21,13 @@ nav
         text-align: left
         float: left
         width: 100%
-        background-color: $lightBlue
-        
-        &.closed li
+        @include breakpoint (desktop)
+            background-color: $lightBlue
+            float: left
+            display: flex
+            @include breakpoint (tablet)
+                width: 50%
+        &.closed li 
             background-image: url("../images/Hamburger.png")
             background-repeat: no-repeat
             display: none
@@ -33,7 +37,6 @@ nav
                 background-image: none
                 border-right: 1px solid $white
                 height: 40px
-
             @include breakpoint (desktop)
                 display: block
                 background-image: none
@@ -73,16 +76,16 @@ nav
                 &:nth-child(n+2) 
                     display: none
             .dropdown
+                border: 0
                 @include breakpoint (tablet)
                     display: none  
                 @include breakpoint (desktop)
                     display: none  
-                li
-                    border: 0
+               
             &:hover 
                 background-color: $darkBlue
                 ul.dropdown
-                    display: block                     
+                    display: block   
                     @include breakpoint (tablet)
                         display: flex
                         border-top: 1px solid
@@ -90,68 +93,66 @@ nav
                     @include breakpoint (desktop)
                         display: block
                         float: left
-
-                    li
+                    >li
                         float: none
                         width: auto
                         padding: 0 20px
                         background-color: $lightBlue
                         @include breakpoint (desktop)
                             display: block
-                            &:hover 
-                                background-color: $darkBlue
-                                // border: 2px solid $white
+                            border: 0
+                        &:hover 
+                            background-color: $darkBlue
              
-    main
-        max-width: 1100px
+main
+    max-width: 1100px
+    width: 100%
+    margin: 20px  auto
+    @include breakpoint(mobile)
+        padding: 10px
+    #header
         width: 100%
-        margin: 20px  auto
+        padding: 20px
         @include breakpoint(mobile)
-            padding: 10px
-        #header
+            width: 50%
+            padding: 0
+        img
+            width: 50%
+            margin: 0 auto
+        h6
+            color: $darkBlue
+             
+section
+        padding: 1em
+        float: left
+        width: 65%
+        margin-right: 2em
+        @include breakpoint(tablet)
+            float: none
+            display: block
             width: 100%
-            padding: 20px
-            @include breakpoint(mobile)
-                width: 50%
-                padding: 0
-            img
-                width: 50%
-                margin: 0 auto
-            h6
-                color: $darkBlue
-            
-            
-        section
-            padding: 1em
-            float: left
-            width: 65%
-            margin-right: 2em
+        @include breakpoint(mobile)
+            float: none
+            display: block
+            width: 100%
+        #col
+            column-count: 3
             @include breakpoint(tablet)
-                float: none
-                display: block
-                width: 100%
+                column-count: 2
             @include breakpoint(mobile)
-                float: none
-                display: block
-                width: 100%
-            #col
-                column-count: 3
-                @include breakpoint(tablet)
-                    column-count: 2
-                @include breakpoint(mobile)
-                    column-count: 1
+                column-count: 1
 
-        aside
-            padding: 1em
-            float: right
-            width: 28%
-            @include breakpoint(tablet)
-                float: none 
-                display: block
-                width: 100%
-                margin: 10px auto
-            @include breakpoint(mobile)
-                float: none 
-                display: block
-                width: 100%
-                margin: 10px auto
+aside
+        padding: 1em
+        float: right
+        width: 28%
+        @include breakpoint(tablet)
+            float: none 
+            display: block
+            width: 100%
+            margin: 10px auto
+        @include breakpoint(mobile)
+            float: none 
+            display: block
+            width: 100%
+            margin: 10px auto
