@@ -417,7 +417,20 @@ nav ul {
   text-align: left;
   float: left;
   width: 100%;
-  background-color: #2DA9FF;
+}
+
+@media screen and (min-width: 60em) {
+  nav ul {
+    background-color: #2DA9FF;
+    float: left;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 59.99em) {
+  nav ul {
+    width: 900px;
+  }
 }
 
 nav ul.closed li {
@@ -508,6 +521,10 @@ nav ul li a:nth-child(n+2) {
   display: none;
 }
 
+nav ul li .dropdown {
+  border: 0;
+}
+
 @media screen and (min-width: 40em) and (max-width: 59.99em) {
   nav ul li .dropdown {
     display: none;
@@ -521,7 +538,28 @@ nav ul li a:nth-child(n+2) {
 }
 
 nav ul li .dropdown li {
-  border: 0;
+  float: none;
+  width: 100%;
+  padding: 0 20px;
+  background-color: #2DA9FF;
+  border: 5px;
+}
+
+@media screen and (min-width: 40em) and (max-width: 59.99em) {
+  nav ul li .dropdown li {
+    width: 15%;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  nav ul li .dropdown li {
+    display: block;
+    border: 0;
+  }
+}
+
+nav ul li .dropdown li:hover {
+  background-color: #0A75BE;
 }
 
 nav ul li:hover {
@@ -530,12 +568,14 @@ nav ul li:hover {
 
 nav ul li:hover ul.dropdown {
   display: block;
+  border: 0;
 }
 
 @media screen and (min-width: 40em) and (max-width: 59.99em) {
   nav ul li:hover ul.dropdown {
     display: flex;
-    border-top: 1px solid;
+    margin-left: -180px;
+    width: 900px;
   }
 }
 
@@ -546,56 +586,40 @@ nav ul li:hover ul.dropdown {
   }
 }
 
-nav ul li:hover ul.dropdown li {
-  float: none;
-  width: auto;
-  padding: 0 20px;
-  background-color: #2DA9FF;
-}
-
-@media screen and (min-width: 60em) {
-  nav ul li:hover ul.dropdown li {
-    display: block;
-  }
-  nav ul li:hover ul.dropdown li:hover {
-    background-color: #0A75BE;
-  }
-}
-
-nav main {
+main {
   max-width: 1100px;
   width: 100%;
   margin: 20px  auto;
 }
 
 @media screen and (max-width: 39.99em) {
-  nav main {
+  main {
     padding: 10px;
   }
 }
 
-nav main #header {
+main #header {
   width: 100%;
   padding: 20px;
 }
 
 @media screen and (max-width: 39.99em) {
-  nav main #header {
+  main #header {
     width: 50%;
     padding: 0;
   }
 }
 
-nav main #header img {
+main #header img {
   width: 50%;
   margin: 0 auto;
 }
 
-nav main #header h6 {
+main #header h6 {
   color: #0A75BE;
 }
 
-nav main section {
+section {
   padding: 1em;
   float: left;
   width: 65%;
@@ -603,7 +627,7 @@ nav main section {
 }
 
 @media screen and (min-width: 40em) and (max-width: 59.99em) {
-  nav main section {
+  section {
     float: none;
     display: block;
     width: 100%;
@@ -611,37 +635,37 @@ nav main section {
 }
 
 @media screen and (max-width: 39.99em) {
-  nav main section {
+  section {
     float: none;
     display: block;
     width: 100%;
   }
 }
 
-nav main section #col {
+section #col {
   column-count: 3;
 }
 
 @media screen and (min-width: 40em) and (max-width: 59.99em) {
-  nav main section #col {
+  section #col {
     column-count: 2;
   }
 }
 
 @media screen and (max-width: 39.99em) {
-  nav main section #col {
+  section #col {
     column-count: 1;
   }
 }
 
-nav main aside {
+aside {
   padding: 1em;
   float: right;
   width: 28%;
 }
 
 @media screen and (min-width: 40em) and (max-width: 59.99em) {
-  nav main aside {
+  aside {
     float: none;
     display: block;
     width: 100%;
@@ -650,7 +674,7 @@ nav main aside {
 }
 
 @media screen and (max-width: 39.99em) {
-  nav main aside {
+  aside {
     float: none;
     display: block;
     width: 100%;

@@ -25,8 +25,8 @@ nav
             background-color: $lightBlue
             float: left
             display: flex
-            @include breakpoint (tablet)
-                width: 50%
+        @include breakpoint (tablet)
+            width: 900px
         &.closed li 
             background-image: url("../images/Hamburger.png")
             background-repeat: no-repeat
@@ -80,27 +80,33 @@ nav
                 @include breakpoint (tablet)
                     display: none  
                 @include breakpoint (desktop)
-                    display: none  
+                    display: none
+                li
+                    float: none
+                    width: 100%
+                    padding: 0 20px
+                    background-color: $lightBlue
+                    border: 5px
+                    @include breakpoint (tablet)
+                        width: 15%
+                    @include breakpoint (desktop)
+                        display: block
+                        border: 0
+                    &:hover 
+                        background-color: $darkBlue  
             &:hover 
                 background-color: $darkBlue
                 ul.dropdown
-                    display: block   
+                    display: block 
+                    border: 0  
                     @include breakpoint (tablet)
                         display: flex
-                        
+                        margin-left: -180px
+                        width: 900px
                     @include breakpoint (desktop)
                         display: block
                         float: left
-                    >li
-                        float: none
-                        width: auto
-                        padding: 0 20px
-                        background-color: $lightBlue
-                        @include breakpoint (desktop)
-                            display: block
-                            border: 0
-                        &:hover 
-                            background-color: $darkBlue
+           
              
 main
     max-width: 1100px
