@@ -542,12 +542,26 @@ nav ul li .dropdown li {
   width: 100%;
   padding: 0 20px;
   background-color: #2DA9FF;
-  border: 5px;
+  border: 0;
+}
+
+nav ul li .dropdown li:nth-child(1) {
+  border-top: 1px solid #fff;
+}
+
+nav ul li .dropdown li:nth-child(4) {
+  border-bottom: 1px solid #fff;
 }
 
 @media screen and (min-width: 40em) and (max-width: 59.99em) {
   nav ul li .dropdown li {
     width: 15%;
+  }
+  nav ul li .dropdown li:nth-child(1) {
+    border-top: 0;
+  }
+  nav ul li .dropdown li:nth-child(4) {
+    border-bottom: 0;
   }
 }
 
@@ -555,6 +569,12 @@ nav ul li .dropdown li {
   nav ul li .dropdown li {
     display: block;
     border: 0;
+  }
+  nav ul li .dropdown li:nth-child(1) {
+    border-top: 0;
+  }
+  nav ul li .dropdown li:nth-child(4) {
+    border-bottom: 0;
   }
 }
 
