@@ -25,18 +25,19 @@ nav
             background-color: $lightBlue
             float: left
             display: flex
-        @include breakpoint (tablet)
-            width: 900px
+        // @include breakpoint (tablet)
+        //     width: 900px
         &.closed li 
             background-image: url("../images/Hamburger.png")
             background-repeat: no-repeat
             display: none
             background-color: $lightBlue
             @include breakpoint (tablet)
-                display: block
+                display: inline-block
                 background-image: none
                 border-right: 1px solid $white
                 height: 40px
+                width: 33.3%
             @include breakpoint (desktop)
                 display: block
                 background-image: none
@@ -92,7 +93,6 @@ nav
                     &:nth-child(4)
                         border-bottom: 1px solid $white
                     @include breakpoint (tablet)
-                        width: 15%
                         &:nth-child(1)
                             border-top: 0
                         &:nth-child(4)
@@ -113,8 +113,10 @@ nav
                     border: 0  
                     @include breakpoint (tablet)
                         display: flex
-                        margin-left: -180px
-                        width: 900px
+                        left: 0
+                        width: 100%
+                        position: absolute
+                        float: left
                     @include breakpoint (desktop)
                         display: block
                         float: left
