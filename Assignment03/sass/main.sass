@@ -2,6 +2,9 @@
 @import '_mediaqueries.scss'
 @import '_typography.scss'
 @import '_grid.scss'
+
+$parent_menu_items: 3
+$submenu_menu_items: 4
 *
     padding: 0
     margin: 0
@@ -25,8 +28,6 @@ nav
             background-color: $lightBlue
             float: left
             display: flex
-        // @include breakpoint (tablet)
-        //     width: 900px
         &.closed li 
             background-image: url("../images/Hamburger.png")
             background-repeat: no-repeat
@@ -37,7 +38,8 @@ nav
                 background-image: none
                 border-right: 1px solid $white
                 height: 40px
-                width: 33.3%
+                // width: 33.3%
+                width: percentage((1/$parent_menu_items))
             @include breakpoint (desktop)
                 display: block
                 background-image: none
@@ -45,6 +47,8 @@ nav
                 width: 20%
                 border-right: 1px solid $white
                 height: 40px
+                &:nth-last-child(1)
+                    border-right: 0
             &#mobile-menu
                 display: block
                 @include breakpoint (tablet)

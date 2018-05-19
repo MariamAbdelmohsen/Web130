@@ -334,7 +334,7 @@ nav {
           background-image: none;
           border-right: 1px solid #fff;
           height: 40px;
-          width: 33.3%; } }
+          width: 33.3333333333%; } }
       @media screen and (min-width: 60em) {
         nav ul.closed li {
           display: block;
@@ -342,7 +342,9 @@ nav {
           float: left;
           width: 20%;
           border-right: 1px solid #fff;
-          height: 40px; } }
+          height: 40px; }
+          nav ul.closed li:nth-last-child(1) {
+            border-right: 0; } }
       nav ul.closed li#mobile-menu {
         display: block; }
         @media screen and (min-width: 40em) and (max-width: 59.99em) {
